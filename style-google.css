@@ -1,6 +1,7 @@
 html{
     font-size: 62.5%;
     font-family: Arial, Helvetica, sans-serif;
+   
 }
 
 body{
@@ -14,13 +15,23 @@ a{
 }
 
 header{
-    width: 100%;
+    display: flex;
+    justify-content: flex-end;
     height: 60px;
 }
 header nav{
     display: flex;
     justify-content: flex-end;
 }
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 150px auto;
+    
+}
+
 .nav-right-section{
     width: 200px;
     height: auto;
@@ -41,12 +52,9 @@ header nav{
     width: 100%;
     height: 100%;
 }
-main{
-    margin-top: 150px;
-    text-align: center;
-}
+
 .main-logo{
-    width: 780px;
+    display: inline;
     margin: 0 auto;
     margin-bottom: 35px;
 }
@@ -59,7 +67,6 @@ main{
     margin-bottom: 35px;
 }
 .main-input-container{
-    width: 525px;
     border-radius: 100px;
     border: 1px solid #dfe1e5;
     display: flex;
@@ -95,7 +102,6 @@ main{
     cursor: pointer;
 }
 .main-buttons{
-    width: 530px;
     margin: 0 auto;
 }
 .main-buttons div{
@@ -119,12 +125,12 @@ main{
     background-color: #f8f8f8;
 }
 footer{
-    width: 100%;
-    height: 50px;
     position: absolute;
+    width:  -webkit-fill-available;
+    height: 75px;
     bottom: 0;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 2fr;
     align-items: center;
     background-color: #f2f2f2;
     border-top: 1px solid #e4e4e4;
@@ -146,4 +152,14 @@ footer ul li a{
     margin: 10px;
 }
 
+@media (max-width: 560px){
+   
+    .main-input{
+        width: 80%;
+    }
 
+    footer ul{
+        display: flex;
+        flex-direction: column;
+    }
+}
